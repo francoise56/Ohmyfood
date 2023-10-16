@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/36272340d2.js" crossorigin="anonymous"></script>
-    <link rel="steelsheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 </head>
 
 <body>
     <header>
         <h1 class="title">
-            <img src="assets/images/logo/restaurants/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
+            <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
         </h1>
 
-        <form class="place">
+        <form class="search">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Paris, Belleville">
         </form>
-        <div>
+        <div class="display">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button>
@@ -30,9 +31,10 @@
     <div class="steps">
         <h2>Fonctionnement</h2>
         <div>
-            <ol>
+            <ul>
                 <li>
                     <button>
+                        <span class="num">1</span>
                         <i class="fa-solid fa-tablet-screen-button"></i>
                         <span>Choisissez un restaurant</span>
                     </button>
@@ -40,6 +42,7 @@
 
                 <li>
                     <button>
+                        <span class="num">2</span>
                         <i class="fa-solid fa-list-ul"></i>
                         <span>Composez votre menu</span>
                     </button>
@@ -47,20 +50,21 @@
 
                 <li>
                     <button>
+                        <span class="num">3</span>
                         <i class="fa-solid fa-store"></i>
                         <span>Dégustez au restaurant</span>
                     </button>
                 </li>
-            </ol>
+            </ul>
         </div>
     </div>
     <main>
         <div class="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurants-cards">
-                <a class="card-link" href="Menu_la_palette_du_gout.html">
+                <a class="card-link" href="restaurants/la_palette_du_gout.html">
                     <article class="card">
-                        <img src="assets/images/logo/restaurants/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        <img src="assets/images/restaurants/palette_du_gout.jpg"
                             alt="assiette d'entrée sur une table de restaurant">
                         <span>Nouveau</span>
                         <h3>La palette du goût</h3>
@@ -68,28 +72,26 @@
                         <span>Ménilmontant</span>
                     </article>
                 </a>
-                <a class="card-link" href="Menu_la_note_enchantee.html">
+                <a class="card-link" href="restaurants/la_note_enchantee.html">
                     <article class="card">
-                        <img src="assets/images/logo/restaurants/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                            alt="assiette de boulettes ">
+                        <img src="assets/images/restaurants/note_enchantee.jpg" alt="assiette de boulettes ">
                         <span>Nouveau</span>
                         <h3>la note enchantée</h3>
                         <i class="fa-solid fa-heart"></i>
                         <span>Charonne</span>
                     </article>
                 </a>
-                <a class="card-link" href="Menu_a_la_francaise.html">
+                <a class="card-link" href="restaurants/a_la_francaise.html">
                     <article class="card">
-                        <img src="assets/images/logo/restaurants/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="assiette de toast ">
-                        <h3>A la française</h3>
+                        <img src="assets/images/restaurants/a_la_francaise.jpg" alt="assiette de toast ">
+                        <h3>À la française</h3>
                         <i class="fa-regular fa-heart"></i>
                         <span>Cité Rouge</span>
                     </article>
                 </a>
-                <a class="card-link" href="Menu_le_delice_des_sens.html">
+                <a class="card-link" href="restaurants/le_delice_des_sens.html">
                     <article class="card">
-                        <img src="assets/images/logo/restaurants/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        <img src="assets/images/restaurants/delice_des_sens.jpg"
                             alt="assiette rectangulaire de poisson">
                         <h3>Le délice des sens</h3>
                         <i class="fa-regular fa-heart"></i>
@@ -100,17 +102,23 @@
         </div>
     </main>
     <footer>
-        <img src="assets/images/logo/restaurants/logo/ohmyfood@2x.svg">
-        <div>
-            <i class="fa-solid fa-utensils"></i>
-            <span>Proposer un restaurant</span>
-        </div>
-        <div>
-            <i class="fa-solid fa-handshake-angle"></i>
-            <span>Devenir partenaire</span>
-        </div>
-        <span>Mentions légales</span>
-        <span>Contact</span>
+        <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
+        <ul>
+            <li>
+                <i class="fa-solid fa-utensils"></i>
+                <span>Proposer un restaurant</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span>Devenir partenaire</span>
+            </li>
+            <li>
+                <span>Mentions légales</span>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
     </footer>
 </body>
 

@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/36272340d2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope&family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope&family=Montserrat:wght@400;600&family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,9 +28,9 @@
         <div class="display">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>
+            <div class="button">
                 <span>Explorer nos restaurants</span>
-            </button>
+            </div>
         </div>
     </header>
 
@@ -33,27 +39,19 @@
         <div>
             <ul>
                 <li>
-                    <button>
                         <span class="num">1</span>
                         <i class="fa-solid fa-tablet-screen-button"></i>
                         <span>Choisissez un restaurant</span>
-                    </button>
                 </li>
-
-                <li>
-                    <button>
+                <li>    
                         <span class="num">2</span>
                         <i class="fa-solid fa-list-ul"></i>
-                        <span>Composez votre menu</span>
-                    </button>
+                        <span>Composez votre menu</span>    
                 </li>
-
-                <li>
-                    <button>
+                <li>    
                         <span class="num">3</span>
                         <i class="fa-solid fa-store"></i>
                         <span>Dégustez au restaurant</span>
-                    </button>
                 </li>
             </ul>
         </div>
@@ -66,7 +64,9 @@
                     <article class="card">
                         <img src="assets/images/restaurants/palette_du_gout.jpg"
                             alt="assiette d'entrée sur une table de restaurant">
-                        <span>Nouveau</span>
+                            <div class="ribbon">
+                                <span>Nouveau</span>
+                            </div>
                         <h3>La palette du goût</h3>
                         <i class="fa-regular fa-heart"></i>
                         <span>Ménilmontant</span>
@@ -75,7 +75,9 @@
                 <a class="card-link" href="restaurants/la_note_enchantee.html">
                     <article class="card">
                         <img src="assets/images/restaurants/note_enchantee.jpg" alt="assiette de boulettes ">
-                        <span>Nouveau</span>
+                        <div class="ribbon">
+                            <span>Nouveau</span>
+                        </div>
                         <h3>la note enchantée</h3>
                         <i class="fa-solid fa-heart"></i>
                         <span>Charonne</span>
@@ -102,7 +104,9 @@
         </div>
     </main>
     <footer>
-        <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
+        <div class="logo">  
+        <span>ohmyfood</span>
+        </div>
         <ul>
             <li>
                 <i class="fa-solid fa-utensils"></i>

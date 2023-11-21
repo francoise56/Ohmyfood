@@ -1,0 +1,165 @@
+/*/@import './common';/*/
+$buttoncolor:linear-gradient(00deg, #9356DC -11.44%, #FF79DA 123.93%);/*/359/*/
+$violet:#9356DC;
+$background:#F6F6F6;
+$grey:#EAEAEA;
+$grey2:#353535;
+$green: #99E2D0;
+$green_font:#008766;
+$white:#FFFFFF;
+$black:#101010;
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-grey);
+    list-style-type: none;
+}
+
+/** COMMON **/
+a {
+    text-decoration: none;
+}
+
+
+
+body {
+    margin: 0;
+}
+@mixin button {
+
+    position: relative;
+    border-radius: 25px;
+    border: 0;
+    box-sizing: border-box;
+    height: 50px;
+    min-width: 186px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $white;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+    transition: all .3s ease-out;
+    overflow: hidden;
+
+    &:before {
+        content:'';
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background: blue;
+        background-color: rgba(255, 255, 255, .15);
+        opacity: 0;
+        transition: all .3s ease-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+}
+
+@mixin heart {
+    position: relative;
+    height: 21px;
+    width: 22px;
+
+    img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: .3s ease-out;
+        opacity: 1;
+    }
+
+    .liked {
+        opacity: 0;
+    }
+
+    &:hover {
+        .like {
+            opacity: 0;
+        }
+        .liked {
+            opacity: 1;
+        }
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    position: relative;
+    z-index: 1;
+
+    img {
+        width: 162px;
+        margin: 23px auto 12px;
+    }
+
+    a {
+
+        position: absolute;
+        top: 28px;
+        left: 12px;
+        transform: translateY(-50%);
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+    }
+}
+
+@mixin footer{
+
+    background-color: $grey2;
+    color: $white;
+    padding: 25px 22px 25px 22px;
+    margin-left: -8px;
+    margin-right: -8px;
+    list-style-type: none;
+
+    .logo{
+
+        span{
+        font-family: 'shrikhand',sans-serif;    
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;
+        
+            }
+        }
+
+    ul{
+
+        padding-left: 0;
+
+        li{
+            background-color: $grey2;
+            border: transparent;
+            line-height: 2;
+        }
+
+        .fa-solid{
+            width: 11px;
+            height: 13px; 
+            padding-right: 11px;                   
+        }
+
+        a{
+            color: $white;
+        }
+    }
+}

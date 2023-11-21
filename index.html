@@ -20,11 +20,17 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="loader">        
+        <img class="loader-hat" src="assets/images/cook_s_hat.png" alt="toque de cuisinier">
+    </div>
+    </div>
     <header>
         <h1 class="title">
             <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
         </h1>
-
+    </header>
+    <main>
         <form class="search">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Paris, Belleville">
@@ -32,35 +38,39 @@
         <div class="display">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="button">
-                <span>Explorer nos restaurants</span>
+            <div class="explore">
+                <button>Explorer les menus</button>
             </div>
         </div>
-    </header>
-
-    <div class="steps">
-        <h2>Fonctionnement</h2>
-        <div>
-            <ul>
-                <li>
-                    <span class="num">1</span>
-                    <i class="fa-solid fa-tablet-screen-button"></i>
-                    <span>Choisissez un restaurant</span>
-                </li>
-                <li>
-                    <span class="num">2</span>
-                    <i class="fa-solid fa-list-ul"></i>
-                    <span>Composez votre menu</span>
-                </li>
-                <li>
-                    <span class="num">3</span>
-                    <i class="fa-solid fa-store"></i>
-                    <span>Dégustez au restaurant</span>
-                </li>
-            </ul>
+        <div class="steps">
+            <h2>Fonctionnement</h2>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="num">1</span>
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <span>Choisissez un restaurant</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="num">2</span>
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span>Composez votre menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="num">3</span>
+                            <i class="fa-solid fa-store"></i>
+                            <span>Dégustez au restaurant</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <main>
+
         <div class="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurants-cards">
@@ -79,7 +89,8 @@
                                 <span>Ménilmontant</span>
                             </div>
                             <div class="card-rating">
-                                <i class="fa-regular fa-heart"></i>
+                                <img src="./assets/images/heart.svg" class="like" alt="like">
+                                <img src="./assets/images/full_heart.svg" class="liked" alt="liked">
                             </div>
                         </div>
                     </article>
@@ -97,36 +108,45 @@
                                 <h3>la note enchantée</h3>
                                 <span>Charonne</span>
                             </div>
-                            <i class="fa-solid fa-heart"></i>
+                            <div class="card-rating">
+                                <img src="./assets/images/heart.svg" class="like" alt="like">
+                                <img src="./assets/images/full_heart.svg" class="liked" alt="liked">
+                            </div>
                         </div>
                     </article>
                 </a>
                 <a class="card-link" href="restaurants/a_la_francaise.html">
                     <article class="card">
                         <div class="card-new">
-                        <img src="assets/images/restaurants/a_la_francaise.jpg" alt="assiette de toast ">
-                    </div>
+                            <img src="assets/images/restaurants/a_la_francaise.jpg" alt="assiette de toast ">
+                        </div>
                         <div class="card-content">
                             <div class="card-text">
                                 <h3>À la française</h3>
                                 <span>Cité Rouge</span>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <div class="card-rating">
+                                <img src="./assets/images/heart.svg" class="like" alt="like">
+                                <img src="./assets/images/full_heart.svg" class="liked" alt="liked">
+                            </div>
                         </div>
                     </article>
                 </a>
                 <a class="card-link" href="restaurants/le_delice_des_sens.html">
                     <article class="card">
                         <div class="card-new">
-                        <img src="assets/images/restaurants/delice_des_sens.jpg"
-                            alt="assiette rectangulaire de poisson">
+                            <img src="assets/images/restaurants/delice_des_sens.jpg"
+                                alt="assiette rectangulaire de poisson">
                         </div>
                         <div class="card-content">
                             <div class="card-text">
                                 <h3>Le délice des sens</h3>
                                 <span>Folie-Méricourt</span>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <div class="card-rating">
+                                <img src="./assets/images/heart.svg" class="like" alt="like">
+                                <img src="./assets/images/full_heart.svg" class="liked" alt="liked">
+                            </div>
                         </div>
                     </article>
                 </a>

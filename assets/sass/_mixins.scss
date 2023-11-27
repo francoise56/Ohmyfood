@@ -47,7 +47,7 @@ body {
         content:'';
         position: absolute;
         top: 0; left: 0; bottom: 0; right: 0;
-        background: blue;
+        /*background: blue;*/
         background-color: rgba(255, 255, 255, .15);
         opacity: 0;
         transition: all .3s ease-out;
@@ -95,7 +95,7 @@ body {
 }
 
 
-header {
+header {/*
     display: flex;
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
@@ -120,13 +120,13 @@ header {
         }
 
     }
-}
+}*/
 
 @mixin footer{
 
     background-color: $grey2;
     color: $white;
-    padding: 25px 22px 25px 22px;
+    padding: 22px 25px 22px 25px;
     margin-left: -8px;
     margin-right: -8px;
     list-style-type: none;
@@ -138,6 +138,7 @@ header {
         color: $white;
         font-size: 18px;
         font-weight: 400;
+        gap: 16px;
         
             }
         }
@@ -162,4 +163,5 @@ header {
             color: $white;
         }
     }
+}
 }

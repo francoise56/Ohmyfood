@@ -95,7 +95,7 @@ body {
 }
 
 
-header {/*
+/*header {/*
     display: flex;
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
@@ -164,4 +164,36 @@ header {/*
         }
     }
 }
-}
+@mixin footerRespons{
+    padding: 30px 25px;
+            height: 114px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: end;
+            font-size: 16px;
+            font-weight: 500;
+
+            .logo {
+
+                margin-left: 90px;
+                margin-right: 41px;
+
+            }
+
+            ul {
+                
+                margin-top: 0;
+                display: flex;
+                flex-direction: row;
+
+                li:nth-child(2) {
+
+                    margin-right: 45px;
+                    
+                }
+
+            }
+
+        }
+

@@ -1,38 +1,5 @@
 @import './mixins';
 
-/*/@import './common';/*/
-/*/
-/*/
-/*/.card {
-
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-
-    .picture {
-
-        position: relative;
-
-        img {
-            height: 100px;
-        }
-
-        .ribbon {
-
-            padding: 5px;
-            background: cyan;
-            border-radius: 3px;
-            font-weight: bold;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);/*/
-
-
-
-
 
 * {
     font-family: 'roboto', sans-serif;
@@ -51,7 +18,6 @@ h2 {
 }
 
 $buttoncolor: linear-gradient(00deg, #9356DC -11.44%, #FF79DA 123.93%);
-/*/359/*/
 $violet: #9356DC;
 $background: #F6F6F6;
 $grey: #EAEAEA;
@@ -133,6 +99,7 @@ body {
             opacity: 1;
             height: 300px;
             animation: toque 3s infinite linear;
+            animation-delay: 0.5s;
         }
     }
 
@@ -161,7 +128,7 @@ body {
     @keyframes toque {
         0% {
             transform: rotate3d(0, 1, 0, 0deg) scale(1);
-            
+
         }
 
         50% {
@@ -170,7 +137,7 @@ body {
 
         100% {
             transform: rotate3d(0, 1, 0, 360deg) scale(1);
-            filter: hue-rotate(360deg);
+
         }
     }
 
@@ -201,13 +168,9 @@ body {
             justify-content: center;
             align-items: center;
             height: 50px;
-            /*/width: 100%;*/
-            /*/border: 0px solid transparent;/*/
             background-color: $grey;
-            color: $grey2;
-            gap: 17px;
             font-weight: 500;
-            /*/margin-left: -8px; /*/
+
 
             .fa-solid {
                 color: $grey2;
@@ -217,12 +180,17 @@ body {
             }
 
             input {
+                width: 110px;
                 border: none;
+                text-align: center;
                 background-color: $grey;
+                color: $black;
+                font-weight: 500;
             }
         }
 
         .display {
+            height: 288px;
 
             .content {
 
@@ -230,7 +198,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                height: 287px;
+                /*height: 287px;*/
                 background-color: $background;
                 margin-left: -8px;
                 margin-right: -8px;
@@ -240,10 +208,11 @@ body {
                 width: 257px;
                 height: 68px;
                 padding-top: 39px;
-                margin-top: 0;
+                margin: 0;
                 display: flex;
                 text-align: center;
                 align-items: center;
+                line-height: normal;
             }
 
             p {
@@ -255,13 +224,17 @@ body {
                 text-align: center;
                 margin-left: 34px;
                 margin-right: 26px;
+                margin-top: 0;
             }
 
             .explore {
+                margin-top: 0px;
+                margin-bottom: 50px;
+                ;
 
                 button {
                     @include button;
-                    margin-top: 27px;
+                    margin-top: 0px;
                 }
             }
         }
@@ -331,8 +304,13 @@ body {
     }
 
     .steps {
-        margin-top: 46px;
-        padding-bottom: 43px;
+        height: 440px;
+        margin-top: 48px;
+        /*padding-bottom: 43px;*/
+
+        h2 {
+            margin-left: 20px;
+        }
 
         ul {
 
@@ -393,7 +371,7 @@ body {
                         color: $grey2;
                     }
 
-                    &-i:hover {
+                    &:hover {
                         color: $violet;
                     }
 
@@ -423,6 +401,15 @@ body {
     .restaurants {
         background-color: $background;
         padding-bottom: 66px;
+        border-top: 54px;
+        height: 1226px;
+
+        .content{
+            padding-top: 54px;
+}
+        h2 {
+            margin-left: 20px;
+        }
 
         .restaurants-cards {
             display: flex;
@@ -436,6 +423,7 @@ body {
             .card {
                 border-radius: 15px 15px 0 0;
                 overflow: hidden;
+
 
                 &-new {
 
@@ -469,24 +457,29 @@ body {
                 }
 
                 .card-content {
-                    padding: 15px;
+                    padding: 0;
                     display: flex;
                     justify-content: space-between;
+                    line-height: normal;
 
                     &-text {
                         line-height: normal;
-                        
+
                         h3 {
                             margin: 0;
-                            /*margin-bottom: 5px;*/
+                            margin-bottom: 0px;
                         }
 
+                        span {
+                            margin-top: 5px;
+                        }
                     }
 
                     .card-rating {
                         @include heart;
                         margin-top: 5px;
                         margin-right: 5px;
+                        padding-left: 10px;
                     }
                 }
             }
@@ -600,39 +593,4 @@ body {
     footer {
         @include footerRespons
     }
-
-    /*footer {
-
-            padding: 30px 25px;
-            height: 114px;
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: end;
-            font-size: 16px;
-            font-weight: 500;
-
-            .logo {
-
-                margin-left: 90px;
-                margin-right: 41px;
-
-            }
-
-            ul {
-                
-                margin-top: 0;
-                display: flex;
-                flex-direction: row;
-
-                li:nth-child(2) {
-
-                    margin-right: 45px;
-                    
-                }
-
-            }
-
-        }*/
-
 }

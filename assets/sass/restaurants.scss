@@ -22,26 +22,14 @@ header {
                 height: 30px;
                 width: 30px;
 
+
             }
         }
     }
 }
 
 main {
-    /*section {
-        /* &.menu-section {
-            .card-content {
-                transform: translateX(-100%);
-                animation: leftToRight 1s ease-out forwards;
-            }
-    
-            @for $i from 1 to 4 {
-                &:nth-of-type(#{$i}) .card-content {
-                    animation-delay: ($i - 1) + 1s;
-                }
-            }
-        }
-    }*/
+
 
     /*.starter {
         color: transparent;
@@ -149,8 +137,9 @@ main {
             align-items: center;
             position: relative;
 
+
             h2 {
-                margin: 0;
+                margin-right: 10px;
                 color: #101010;
                 font-family: 'Shrikhand', sans-serif;
                 font-size: 28px;
@@ -160,7 +149,9 @@ main {
             .card-rating {
                 @include heart;
                 position: absolute;
-                right: 27px;
+                right: 10px;
+
+
             }
 
         }
@@ -198,72 +189,85 @@ main {
                 gap: 12px;
 
                 li {
+                    &.menu-section {
+                        .card {
 
-                    .card {
-
-                        border-radius: 15px;
-                        background: #fff;
-                        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-                        display: flex;
-                        overflow: hidden;
-                        cursor: pointer;
-
-                        &-content {
-                            padding: 15px;
-                            box-sizing: border-box;
-                            width: 100%;
-                        }
-
-                        &-header {
-
-                            color: #000;
-                            font-size: 18px;
-                            font-weight: 500;
-                            margin-bottom: 5px;
-
-                        }
-
-                        &-body {
+                            border-radius: 15px;
+                            background: #fff;
+                            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
                             display: flex;
-                            align-items: center;
-                            justify-content: space-between;
+                            overflow: hidden;
+                            cursor: pointer;
 
-                            span {
-                                font-size: 15px;
-                                font-weight: 300;
+                            &-content {
+                                padding: 15px;
+                                box-sizing: border-box;
+                                width: 100%;
+                                transform: translateX(-100%);
+                                animation: leftToRight 1s ease-out forwards;
 
-                                &.price {
-                                    font-weight: 700;
+                                @for $i from 1 through 4 {
+                                    &:nth-of-type(#{$i}) .card-content {
+                                        animation-delay: ($i - 1) + 1s;
+                                    }
                                 }
                             }
-                        }
 
-                        &-checked {
-                            display: flex;
-                            background-color: $green;
-                            align-items: center;
-                            justify-content: center;
-                            width: 70px;
-                            margin-right: -70px;
-                            transition: all .25s ease-out;
 
-                            i {
-                                color: $green;
-                                background-color: $white;
-                                border-radius: 50%;
-                                padding: 3px;
+
+
+
+                            &-header {
+
+                                color: #000;
+                                font-size: 18px;
+                                font-weight: 500;
+                                margin-bottom: 5px;
+
                             }
 
-                        }
+                            &-body {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
 
-                        &:hover {
-                            .card-checked {
-                                margin-right: 0;
+                                span {
+                                    font-size: 15px;
+                                    font-weight: 300;
+
+                                    &.price {
+                                        font-weight: 700;
+                                    }
+                                }
                             }
+
+                            &-checked {
+                                display: flex;
+                                background-color: $green;
+                                align-items: center;
+                                justify-content: center;
+                                width: 70px;
+                                margin-right: -70px;
+                                transition: all .25s ease-out;
+
+                                i {
+                                    color: $green;
+                                    background-color: $white;
+                                    border-radius: 50%;
+                                    padding: 3px;
+                                }
+
+                            }
+
+                            &:hover {
+                                .card-checked {
+                                    margin-right: 0;
+                                }
+                            }
+
                         }
 
                     }
-
                 }
 
             }
@@ -312,7 +316,7 @@ footer {
                 .like-button {
                     position: relative;
                     right: inherit;
-                    margin-left: 24px;
+                    right: -60px;
                 }
 
             }

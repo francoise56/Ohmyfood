@@ -1,5 +1,5 @@
-/*/@import './common';/*/
-$buttoncolor:linear-gradient(00deg, #9356DC -11.44%, #FF79DA 123.93%);/*/359/*/
+
+$buttoncolor:linear-gradient(00deg, #9356DC -11.44%, #FF79DA 123.93%);
 $violet:#9356DC;
 $background:#F6F6F6;
 $grey:#EAEAEA;
@@ -16,7 +16,7 @@ $black:#101010;
     list-style-type: none;
 }
 
-/** COMMON **/
+/* COMMON */
 a {
     text-decoration: none;
 }
@@ -68,6 +68,7 @@ body {
     position: relative;
     height: 21px;
     width: 22px;
+    
 
     img {
         top: 50%;
@@ -123,7 +124,7 @@ body {
 }*/
 
 @mixin footer{
-
+    height: 186px;
     background-color: $grey2;
     color: $white;
     padding: 22px 25px 22px 25px;
@@ -164,8 +165,9 @@ body {
         }
     }
 }
+
 @mixin footerRespons{
-    padding: 30px 25px;
+            padding: 30px 25px;
             height: 114px;
             display: flex;
             flex-direction: row-reverse;
@@ -176,7 +178,7 @@ body {
 
             .logo {
 
-                margin-left: 90px;
+                margin-left: 45px;
                 margin-right: 41px;
 
             }
@@ -184,10 +186,12 @@ body {
             ul {
                 
                 margin-top: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
                 display: flex;
                 flex-direction: row;
 
-                li:nth-child(2) {
+                li {
 
                     margin-right: 45px;
                     

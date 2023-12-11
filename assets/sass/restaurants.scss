@@ -6,10 +6,7 @@ header {
     align-items: center;
 
     .title {
-        /*display: flex;
-        justify-content: center;
-        align-items: center;*/
-
+        
         a {
             position: absolute;
             top: 28px;
@@ -22,101 +19,12 @@ header {
                 height: 30px;
                 width: 30px;
 
-
             }
         }
     }
 }
 
 main {
-
-
-    /*.starter {
-        color: transparent;
-        font-size: 0px;
-
-
-        &-.card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        &-.card::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            transform: translateX(100%);
-        }
-
-        .card:nth-child(1) {
-            animation: article-appearance 0s 1s forwards;
-        }
-
-        .card:nth-child(1)::after {
-            background-color: salmon;
-            animation: slide-in 0.75s ease-out forwards slide-out 0.75s 1s ease-out forwards;
-
-        }
-
-        @keyframes slide-in {
-            100% {
-                transform: translateX(0%);
-            }
-        }
-
-        @keyframes slide-out {
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        @keyframes article-appearance {
-            100% {
-                color: #000;
-            }
-        }
-
-        /*.starter{
-
-    $animation-duration:10s;
-    animation: appearance $animation-duration forwards .5s;
-    transform-origin: left ;
-    }
-
-@keyframes starter{
-    0%{
-        transform: scaleX(0);
-    }
-    100%{
-        transform: scaleX(1);
-    }
-}
-    .dish{
-    $animation-duration:30s;
-    animation: appearance $animation-duration forwards .5s;
-    transform-origin: left ;   
-
-}
-@keyframes dish{
-    0%{
-        transform: scaleX(0);
-    }
-    100%{
-        transform: scaleX(1);
-    }
-}
-
-    /*.starter{
-    $animation-duration:1s;
-    animation: appearance $animation-duration forwards .5s;
-    transform-origin: left ;*/
-
-
-    /*display: flex;
-    flex-direction: column;*/
 
     img {
         height: 275px;
@@ -137,10 +45,9 @@ main {
             align-items: center;
             position: relative;
 
-
             h2 {
                 margin-right: 10px;
-                color: #101010;
+                color: $black;
                 font-family: 'Shrikhand', sans-serif;
                 font-size: 28px;
                 font-weight: 400;
@@ -149,8 +56,7 @@ main {
             .card-rating {
                 @include heart;
                 position: absolute;
-                right: 10px;
-
+                right: 30px;
 
             }
 
@@ -164,7 +70,7 @@ main {
                 font-weight: 300;
                 text-transform: uppercase;
                 font-size: 16px;
-                color: #000;
+                color: $black;
                 position: relative;
 
                 &:after {
@@ -175,7 +81,7 @@ main {
                     width: 40px;
                     left: 0;
                     margin-top: 10px;
-                    background: #99E2D0;
+                    background: $green;
                 }
             }
 
@@ -189,85 +95,84 @@ main {
                 gap: 12px;
 
                 li {
-                    &.menu-section {
-                        .card {
 
-                            border-radius: 15px;
-                            background: #fff;
-                            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+                    .card {
+
+                        border-radius: 15px;
+                        background: $white;
+                        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+                        display: flex;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        &-content {
+                            padding: 15px;
+                            box-sizing: border-box;
+                            width: 100%;
+                            animation: fadeIn 1.8s;
+
+
+                            @keyframes fadeIn {
+                                0% {
+                                    opacity: 0;
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        &-header {
+
+                            color: $black;
+                            font-size: 18px;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+
+                        }
+
+                        &-body {
                             display: flex;
-                            overflow: hidden;
-                            cursor: pointer;
+                            align-items: center;
+                            justify-content: space-between;
 
-                            &-content {
-                                padding: 15px;
-                                box-sizing: border-box;
-                                width: 100%;
-                                transform: translateX(-100%);
-                                animation: leftToRight 1s ease-out forwards;
+                            span {
+                                font-size: 15px;
+                                font-weight: 300;
 
-                                @for $i from 1 through 4 {
-                                    &:nth-of-type(#{$i}) .card-content {
-                                        animation-delay: ($i - 1) + 1s;
-                                    }
+                                &.price {
+                                    font-weight: 700;
                                 }
                             }
+                        }
 
+                        &-checked {
+                            display: flex;
+                            background-color: $green;
+                            align-items: center;
+                            justify-content: center;
+                            width: 70px;
+                            margin-right: -70px;
+                            transition: all .25s ease-out;
 
-
-
-
-                            &-header {
-
-                                color: #000;
-                                font-size: 18px;
-                                font-weight: 500;
-                                margin-bottom: 5px;
-
-                            }
-
-                            &-body {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-
-                                span {
-                                    font-size: 15px;
-                                    font-weight: 300;
-
-                                    &.price {
-                                        font-weight: 700;
-                                    }
-                                }
-                            }
-
-                            &-checked {
-                                display: flex;
-                                background-color: $green;
-                                align-items: center;
-                                justify-content: center;
-                                width: 70px;
-                                margin-right: -70px;
-                                transition: all .25s ease-out;
-
-                                i {
-                                    color: $green;
-                                    background-color: $white;
-                                    border-radius: 50%;
-                                    padding: 3px;
-                                }
-
-                            }
-
-                            &:hover {
-                                .card-checked {
-                                    margin-right: 0;
-                                }
+                            i {
+                                color: $green;
+                                background-color: $white;
+                                border-radius: 50%;
+                                padding: 3px;
                             }
 
                         }
 
+                        &:hover {
+                            .card-checked {
+                                margin-right: 0;
+                            }
+                        }
+
                     }
+
                 }
 
             }
@@ -299,7 +204,7 @@ footer {
 
         display: block;
 
-        &>img {
+        & > img {
             height: 383px;
             width: 100%;
         }

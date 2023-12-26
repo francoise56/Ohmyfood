@@ -1,91 +1,14 @@
 @import './mixins';
-
-
-* {
-    font-family: 'roboto', sans-serif;
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 48px;
-    margin-bottom: 26px;
-}
-
-$buttoncolor: linear-gradient(00deg, #9356DC -11.44%, #FF79DA 123.93%);
-$violet: #9356DC;
-$background: #F6F6F6;
-$grey: #EAEAEA;
-$grey2: #353535;
-$green: #99E2D0;
-$green_font: #008766;
-$white: #FFFFFF;
-$black: #101010;
+@import './variables';
 
 body {
 
-    /*.loader {
-        $animation-duration: 3s;
-        position: fixed;
-        display: flex;
-        place-items: center;
-        background-color: $grey;
-        height: 100vh;
-        width: 100vw;
-        z-index: 2;
-        opacity: 0.9;
-        animation: disappear $animation-duration forwards;
-        transform-origin: top;
-
-        &-hat {
-            $animation-duration: 3s;
-            display: flex;
-            place-items: center;
-            position: relative;
-            opacity: 0.9;
-            height: 300px;
-            inset: 30px;
-            /*filter: hue-rotate(100deg);
-            animation: toque 3s infinite linear;
-            // background-blend-mode: color-dodge;
-        }
-    }
-
-    @keyframes disappear {
-        from {
-            transform: scale(1)
-        }
-
-        to {
-            transform: scale(0);
-        }
-    }
-
-    @keyframes toque {
-        0% {
-            transform: rotate(0deg) scale(1);
-        }
-
-        50% {
-            transform: rotate(180deg) scale(1.5);
-        }
-
-        100% {
-            transform: rotate(360deg) scale(1);
-        }
-    }*/
     .loader {
         $animation-duration: 2s;
         position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
-        /*background-color: $buttoncolor;*/
         opacity: 0;
         height: 100vh;
         width: 100vw;
@@ -156,10 +79,6 @@ body {
 
     main {
 
-        /*/display: flex;
-    justify-content: center;
-    align-items: center;/*/
-
         .search {
             display: flex;
             justify-content: center;
@@ -173,7 +92,6 @@ body {
                 color: $grey2;
                 display: flex;
                 align-items: center;
-                /*/margin-right: 17px;/*/
             }
 
             input {
@@ -187,7 +105,7 @@ body {
         }
 
         .display {
-            /*height: 288px;*/
+
             background-color: $background;
 
             .content {
@@ -196,7 +114,6 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                /*height: 287px;*/
                 width: 100%;
             }
 
@@ -234,77 +151,12 @@ body {
                 }
             }
         }
-
-        /*/             position: relative;
-                    border-radius: 25px;
-                    border: 0;
-                    box-sizing: border-box;
-                    height: 50px;
-                    min-width: 186px;
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #FFF;
-                    padding: 15px 20px;
-                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-                    background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
-                    transition: all .3s ease-out;
-                    overflow: hidden;
-                
-                    &:before {
-                        content:'';
-                        position: absolute;
-                        top: 0; left: 0; bottom: 0; right: 0;
-                        background: blue;
-                        background-color: rgba(255, 255, 255, .15);
-                        opacity: 0;
-                        transition: all .3s ease-out;
-                    }
-                
-                    &:hover {
-                        cursor: pointer;
-                        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-                
-                        &:before {
-                            opacity: 1;
-                        }
-                    }
-                
-                }
-                width: 218px;
-                height: 50px;
-                display: flex;
-	            align-items: center;
-	            justify-content: center;
-	            text-decoration: none;
-	            background: $buttoncolor;
-                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-	            border-radius: 25px;
-	            box-sizing: border-box;
-                /*/
-        /*/
-                &:hover{ 
-                    box-shadow: 0px 8px 15px 5px rgba(0, 0, 0, 0.25);
-                    background-color: red;
-                }
-                    span {
-
-                    color: $white;
-	                font-family: 'roboto';
-	                font-style: normal;
-	                font-weight: 500;
-	                font-size: 16px;
-	                line-height: normal;    
-                    }
-            
-        }/*/
     }
 
     .steps {
-        padding-top: 48px;
-        margin-bottom: 43px;
-
-        /*padding-bottom: 43px;*/
-        background-color: red;
+        padding-top: 1px;
+        padding-bottom: 43px;
+        background-color: $white;
 
         h2 {
             margin-left: 20px;
@@ -313,28 +165,14 @@ body {
         ul {
 
             list-style: none;
-            padding-left: 20px;
-            padding-right: 20px;
-
+            padding-left: 10px;
+            padding-right: 10px;
 
             li {
                 margin-bottom: 25px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
                 counter-increment: listCounter;
-
-                /*/width: 322px; 
-            height: 73px;  
-            box-sizing: border-box; 
-            background-color: $background;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-            padding: 10px;
-            padding-left: 20px;
-            margin: 10px;
-            border-radius: 20px;
-            position: relative;
-            display: flex;
-            align-items: center;/*/
 
                 a {
                     height: 73px;
@@ -348,7 +186,7 @@ body {
                     position: relative;
 
                     span {
-                        color: #000;
+                        color: $black;
                         font-weight: 500;
                     }
 
@@ -358,11 +196,11 @@ body {
                         height: 24px;
                         width: 24px;
                         border-radius: 50%;
-                        background-color: var(--color-primary);
+                        background-color: $violet;
                         left: -12px;
                         top: 50%;
                         transform: translateY(-50%);
-                        color: #FFF;
+                        color: $white;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -408,7 +246,7 @@ body {
 
 
         .content {
-            padding-top: 54px;
+            padding-top: 15px;
         }
 
         h2 {
@@ -425,8 +263,12 @@ body {
             }
 
             .card {
-                border-radius: 15px 15px 0 0;
+                border-radius: 15px;
                 overflow: hidden;
+                background-color: $white;
+                margin-right: 15px;
+                margin-left: 15px;
+                padding-bottom: 15px;
 
 
                 &-new {
@@ -463,25 +305,27 @@ body {
                 .card-content {
                     padding: 0;
                     display: flex;
-                    justify-content: space-between;
-                    line-height: normal;
+                    justify-content: space-around;
+                    line-height: 0.5;
+                    margin: 0;
 
                     &-text {
                         line-height: normal;
+                        margin: 0;
 
                         h3 {
-                            margin: 0;
+
                             margin-bottom: 0px;
                         }
 
                         span {
-                            margin-top: 5px;
+                            margin-top: 0;
                         }
                     }
 
                     .card-rating {
                         @include heart;
-                        margin-top: 5px;
+                        margin-top: 20px;
                         margin-right: 5px;
                         padding-left: 10px;
                     }
@@ -506,10 +350,6 @@ body {
             height: 34px;
             margin: 30px auto;
         }
-
-        /*a {
-            top: 50%;
-        }*/
     }
 
     main {
@@ -594,7 +434,4 @@ body {
 
     }
 
-    /*footer {
-        @include footerRespons
-    }*/
 }

@@ -1,5 +1,5 @@
-@import './mixins';
 @import './variables';
+@import './mixins';
 
 header {
     display: flex;
@@ -67,6 +67,16 @@ main {
         section {
 
             margin-top: 28px;
+
+            #fourPlates{
+                @for $i from 1 through 4 {
+                    @for $j from 1 through 4 {
+                        &:nth-of-type(#{$i}) li:nth-of-type(#{$j}) .card-content {
+                            animation-delay: (4 * ($i - 1) + $j) * .5s;
+                        }
+                    }
+                }
+            }
 
             @keyframes fadeIn {
                 from {

@@ -1,5 +1,5 @@
-@import './mixins';
 @import './variables';
+@import './mixins';
 
 body {
 
@@ -28,15 +28,15 @@ body {
     @keyframes disappear {
         0% {
             opacity: 1;
-            background-color: $green;
+            background: $green;
         }
 
         45% {
-            background-color: $violet;
+            background: $violet;
         }
 
         80% {
-            background-color: $buttoncolor ;
+            background: $buttoncolor ;
         }
 
         100% {
@@ -303,10 +303,10 @@ body {
                 }
 
                 .card-content {
-                    padding: 0;
+                    padding: 12px;
                     display: flex;
-                    justify-content: space-around;
-                    line-height: 0.5;
+                    justify-content: space-between;
+                    line-height: 0.4;
                     margin: 0;
 
                     &-text {

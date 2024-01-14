@@ -4,6 +4,7 @@
 body {
 
     .loader {
+        $-moz-duration: 2s;
         $animation-duration: 2s;
         position: fixed;
         display: flex;
@@ -13,7 +14,9 @@ body {
         height: 100vh;
         width: 100vw;
         z-index: 2;
+        -moz-animation: disappear $-moz-duration forwards;
         animation: disappear $animation-duration forwards;
+        -moz-transform-origin: top;
         transform-origin: top;
 
         &-hat {
@@ -21,7 +24,29 @@ body {
             position: relative;
             opacity: 1;
             height: 300px;
+            -moz-animation: toque ($-moz-animation-duration / 2) infinite linear;
             animation: toque ($animation-duration / 2) infinite linear;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    @-moz-keyframes disappear {
+        0% {
+            opacity: 1;
+            background: $green;
+        }
+
+        45% {
+            background: $violet;
+        }
+
+        80% {
+            background: $buttoncolor ;
+        }
+
+        100% {
+            opacity: 0;
+            display: none;
         }
     }
 
@@ -42,6 +67,22 @@ body {
         100% {
             opacity: 0;
             display: none;
+        }
+    }
+
+    @-moz-keyframes toque {
+        0% {
+            -moz-transform: rotate3d(0, 1, 0, 0deg) scale(1);
+
+        }
+
+        50% {
+            -moz-transform: rotate3d(0, 1, 0, 180deg) scale(1.5);
+        }
+
+        100% {
+            -moz-transform: rotate3d(0, 1, 0, 360deg) scale(1);
+
         }
     }
 
@@ -143,7 +184,6 @@ body {
             .explore {
                 margin-top: 0px;
                 margin-bottom: 50px;
-
 
                 button {
                     @include button;
@@ -337,8 +377,6 @@ body {
 
     }
 }
-
-
 
 @media (min-width: 768px) {
 

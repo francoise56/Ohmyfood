@@ -4,7 +4,7 @@
 body {
 
     .loader {
-        $-moz-duration: 2s;
+        $-moz-animation-duration: 2s;
         $animation-duration: 2s;
         position: fixed;
         display: flex;
@@ -14,7 +14,7 @@ body {
         height: 100vh;
         width: 100vw;
         z-index: 2;
-        -moz-animation: disappear $-moz-duration forwards;
+        -moz-animation: disappear $-moz-animation-duration forwards;
         animation: disappear $animation-duration forwards;
         -moz-transform-origin: top;
         transform-origin: top;
@@ -26,7 +26,6 @@ body {
             height: 300px;
             -moz-animation: toque ($-moz-animation-duration / 2) infinite linear;
             animation: toque ($animation-duration / 2) infinite linear;
-            animation-fill-mode: backwards;
         }
     }
 

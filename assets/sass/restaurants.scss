@@ -137,6 +137,7 @@ main {
                             width: 100%;
                             opacity: 0;
                             animation: fadeIn 1.8s forwards;
+                            transition: width .25s ease-out;
 
                         }
 
@@ -147,9 +148,7 @@ main {
                             font-weight: 500;
                             margin-bottom: 5px;
 
-                            &:hover {
-                                @include ellipsis;
-                            }
+                            @include ellipsis;
                         }
 
                         &-body {
@@ -161,7 +160,7 @@ main {
                                 font-size: 15px;
                                 font-weight: 300;
 
-                                &:hover {
+                                &:not(.price) {
                                     @include ellipsis;
                                 }
 
@@ -195,72 +194,79 @@ main {
 
                             }
 
+                            .card-content {
+                                width: calc(100% - 70px);
+
+                            }
                         }
 
                     }
+
                 }
 
             }
 
         }
 
-        .explore {
-            padding-top: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    }
 
-            button {
-                @include button;
-                margin-top: 12px;
-                margin-bottom: 40px;
-            }
-        }
+    .explore {
+        padding-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        #menuLaNoteEnchantee {
-
-            section:nth-of-type(1) li:nth-of-type(1) .card-content {
-                animation-delay: .5s;
-            }
-
-            section:nth-of-type(1) li:nth-of-type(2) .card-content {
-                animation-delay: 1s;
-            }
-
-            section:nth-of-type(1) li:nth-of-type(3) .card-content {
-                animation-delay: 1.5s;
-            }
-
-            section:nth-of-type(1) li:nth-of-type(4) .card-content {
-                animation-delay: 2s;
-            }
-
-            section:nth-of-type(2) li:nth-of-type(1) .card-content {
-                animation-delay: 2.5s;
-            }
-
-            section:nth-of-type(2) li:nth-of-type(2) .card-content {
-                animation-delay: 3s;
-            }
-
-            section:nth-of-type(2) li:nth-of-type(3) .card-content {
-                animation-delay: 3.5s;
-            }
-
-            section:nth-of-type(3) li:nth-of-type(1) .card-content {
-                animation-delay: 4s;
-            }
-
-            section:nth-of-type(3) li:nth-of-type(2) .card-content {
-                animation-delay: 4.5s;
-            }
-
-            section:nth-of-type(3) li:nth-of-type(3) .card-content {
-                animation-delay: 5s;
-            }
-
+        button {
+            @include button;
+            margin-top: 12px;
+            margin-bottom: 40px;
         }
     }
+
+    #menuLaNoteEnchantee {
+
+        section:nth-of-type(1) li:nth-of-type(1) .card-content {
+            animation-delay: .5s;
+        }
+
+        section:nth-of-type(1) li:nth-of-type(2) .card-content {
+            animation-delay: 1s;
+        }
+
+        section:nth-of-type(1) li:nth-of-type(3) .card-content {
+            animation-delay: 1.5s;
+        }
+
+        section:nth-of-type(1) li:nth-of-type(4) .card-content {
+            animation-delay: 2s;
+        }
+
+        section:nth-of-type(2) li:nth-of-type(1) .card-content {
+            animation-delay: 2.5s;
+        }
+
+        section:nth-of-type(2) li:nth-of-type(2) .card-content {
+            animation-delay: 3s;
+        }
+
+        section:nth-of-type(2) li:nth-of-type(3) .card-content {
+            animation-delay: 3.5s;
+        }
+
+        section:nth-of-type(3) li:nth-of-type(1) .card-content {
+            animation-delay: 4s;
+        }
+
+        section:nth-of-type(3) li:nth-of-type(2) .card-content {
+            animation-delay: 4.5s;
+        }
+
+        section:nth-of-type(3) li:nth-of-type(3) .card-content {
+            animation-delay: 5s;
+        }
+
+    }
+
 }
 
 footer {
